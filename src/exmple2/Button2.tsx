@@ -17,7 +17,7 @@ export const SimpleButton2: VFC<{
   onClick: () => void
   count: number
 }> = ({ onClick, count }) => {
-  const classes = SimpleButtonStyles()
+  const classes = useSimpleButtonStyles()
 
   return (
     <Button
@@ -30,6 +30,6 @@ export const SimpleButton2: VFC<{
   )
 }
 
-const SimpleButtonStyles = makeStyles((theme: Theme) => ({
+const useSimpleButtonStyles = makeStyles((theme: Theme) => ({
   container: { height: 50, width: 200, backgroundColor: 'green' },
 }))

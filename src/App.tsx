@@ -5,6 +5,8 @@ import { SimpleButton } from './exmple1/Button'
 import { makeStyles, Typography } from '@material-ui/core'
 import { SimpleButton2Parent } from './exmple2/Button2'
 import { SimpleButton3 } from './exmple3/Button3'
+import { Button4ContextProvider } from './exmple4/Button4.context'
+import { SimpleButton4 } from './exmple4/Button4'
 
 function App() {
   const classes = useStyles()
@@ -23,6 +25,12 @@ function App() {
         <div className={classes.exampleContainer}>
           <Typography>Example 3</Typography>
           <SimpleButton3 />
+        </div>
+        <div className={classes.exampleContainer}>
+          <Typography>Example 4</Typography>
+          <Button4ContextProvider>
+            <SimpleButton4 />
+          </Button4ContextProvider>
         </div>
       </header>
     </div>

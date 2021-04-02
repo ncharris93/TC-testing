@@ -3,7 +3,7 @@ import { Button, makeStyles, Theme } from '@material-ui/core'
 import { useButtonState } from './useButton3'
 
 export const SimpleButton3: VFC = () => {
-  const classes = SimpleButtonStyles()
+  const classes = useSimpleButtonStyles()
   const { count, onClick } = useButtonState()
 
   return (
@@ -17,6 +17,6 @@ export const SimpleButton3: VFC = () => {
   )
 }
 
-const SimpleButtonStyles = makeStyles((theme: Theme) => ({
+const useSimpleButtonStyles = makeStyles((theme: Theme) => ({
   container: { height: 50, width: 200, backgroundColor: 'yellow' },
 }))

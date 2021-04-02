@@ -2,7 +2,7 @@ import React, { VFC, useState } from 'react'
 import { Button, makeStyles, Theme } from '@material-ui/core'
 
 export const SimpleButton: VFC = () => {
-  const classes = SimpleButtonStyles()
+  const classes = useSimpleButtonStyles()
   const [count, setCount] = useState(0)
 
   const incrementClick = () => {
@@ -20,6 +20,6 @@ export const SimpleButton: VFC = () => {
   )
 }
 
-const SimpleButtonStyles = makeStyles((theme: Theme) => ({
+const useSimpleButtonStyles = makeStyles((theme: Theme) => ({
   container: { height: 50, width: 200, backgroundColor: 'red' },
 }))
