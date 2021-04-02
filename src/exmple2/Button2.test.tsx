@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 
 import { SimpleButton2 } from './Button2'
 
-describe('SimpleButton', () => {
+describe('SimpleButton2', () => {
   it('should exist', () => {
     const { getByRole } = render(
       <SimpleButton2 onClick={jest.fn()} count={0} />
